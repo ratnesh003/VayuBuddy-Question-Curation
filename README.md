@@ -1,6 +1,7 @@
 # VayuBuddy Question Curation
 
-<hr>
+## 🎯 Aim
+The purpose to create this templet is to have the automated interface to collect and manage data analytic questions for VayuBuddy
 
 ## 📂 Folder Structure
 
@@ -130,17 +131,17 @@ true_code()
 
 open the terminal in the empty folder and follow the following steps:
 
-#### 1st step: clone repo
+### 1st step : clone repo
 ```bash
 git clone https://github.com/ratnesh003/VayuBuddy-Question-Curation.git .
 ```
 
-#### 2rd step: to install the dependencies to run the codes
+### 2rd step : to install the dependencies to run the codes
 ```bash
 pip install -r requirements.txt
 ```
 
-#### 3nd step: to create dummy /data folder from already present output.jsonl
+### 3nd step : to create dummy /data folder from already present output.jsonl
 ```bash
 py .\utils\jsonl_to_data.py 
 ```
