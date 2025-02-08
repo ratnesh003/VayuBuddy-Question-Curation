@@ -1,6 +1,3 @@
-import os
-os.system("pip install pandas")
-
 import streamlit as st
 
 st.set_page_config(page_title="Coding Questions App", layout="wide")
