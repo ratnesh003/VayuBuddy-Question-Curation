@@ -1,5 +1,6 @@
 import os
 import json
+from pathlib import Path
 
 def jsonl_to_data(input_file, output_dir):
     """Reads a JSONL file and reconstructs the original folder structure."""
@@ -20,7 +21,12 @@ def jsonl_to_data(input_file, output_dir):
             with open(os.path.join(folder_path, "code.py"), "w", encoding="utf-8") as f_c:
                 f_c.write(entry["code"])
 
-            with open(os.path.join(folder_path, "meta_data.json"), "w", encoding="utf-8") as f_m:
-                json.dump(entry["meta_data"], f_m, indent=4)
+            with open(os.path.join(folder_path, "metadata.json"), "w", encoding="utf-8") as f_m:
+                json.dump(entry["metadata"], f_m, indent=4)
 
     print(f"Data successfully reconstructed in {output_dir}")
+
+if __name__ == "__main__" :
+    script_dir = Path(__file__).parent
+    input_dir = script_dir.parent / "data/questions"
+    jsonl_to_data('output.jsonl', input_dir)
